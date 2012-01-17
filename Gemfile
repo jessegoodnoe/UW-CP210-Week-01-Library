@@ -34,3 +34,17 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
+
+group :development do
+	gem 'guard'
+	gem 'guard-test'
+	gem 'guard-rspec'
+	gem 'guard-cucumber'
+	gem 'guard-bundler'
+end
+
+group :test, :development do
+	gem 'cucumber-rails'
+	gem 'rspec-rails'
+	gem 'database_cleaner'
+end
