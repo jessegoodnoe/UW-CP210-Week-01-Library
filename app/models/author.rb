@@ -5,6 +5,6 @@ class Author < ActiveRecord::Base
   has_many :books
   
   def full_name
-    [first_name, middle_name, last_name].join(" ")
+    [first_name, middle_name, last_name].compact.join(" ")
   end
 end
